@@ -1,0 +1,7 @@
+{
+	"Error":{"Codigo":0,"Mensaje":null,"Status":"ok"},
+	"ID": 0,
+	"Descripcion": "Tiempo de sesion",
+	"IDConfig": "TIME_OUT",
+	"Valor": "30"
+}

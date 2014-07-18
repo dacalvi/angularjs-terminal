@@ -1,0 +1,85 @@
+<div class="cambiopin">
+	<header>
+		<div class="subrayado"><div class="card"></div>Bienvenido</div>
+		<div class="nombre">{{name}}</div>
+	</header>
+
+<div id="cambiopincontainier">
+	<div style="float:left;">
+		
+		<div id="nameholder" class="pin">
+		  <h1 class="label_cambiopin">Ingresar PIN actual (4 dígitos)</h1>
+		  <input id="pin" class="pinpage_input grad" value="" type="password" ng-click="falsefocus('pin')"/>
+		</div>
+
+		<div id="nameholder" class="nuevopin">
+		  <h1 class="label_cambiopin">Ingresar PIN nuevo (4 dígitos)</h1>
+		  <input id="nuevopin" class="pinpage_input grad" value="" type="password" ng-click="falsefocus('nuevopin')"/>
+		</div>
+
+		<div id="nameholder" class="repin">
+		  <h1 class="label_cambiopin">Ingresar PIN nuevo (4 dígitos)</h1>
+		  <input id="repin" class="pinpage_input grad" value="" type="password" ng-click="falsefocus('repin')"/>
+		  <input type="hidden" id="nowhere" value="">
+		</div>
+
+
+
+		<div id="btn_cambiarpin" class="ng-scope" style="display: none;">
+			<button style="padding-left: 38px;
+position: absolute;
+left: 555px;
+margin-left: -50px;
+margin-top: 140px;" class="actionbutton" ng-click="cambiarPin()">Aceptar</button>
+		</div>
+
+
+	</div>
+
+	<div style="float:left;">
+		<div id="keypad">
+			<div class="row">
+				<button value="1">1</button>
+				<button value="2">2</button>
+				<button value="3">3</button>
+			</div>
+			<div class="row">
+				<button value="4">4</button>
+				<button value="5">5</button>
+				<button value="6">6</button>
+			</div>
+			<div class="row">
+				<button value="7">7</button>
+				<button value="8">8</button>
+				<button value="9">9</button>
+			</div>
+			<div class="row">
+				<button value="c">C</button>
+				<button value="0">0</button>
+				<button value="b"><</button>
+			</div>
+		</div>
+	</div>
+	<h1 style="padding-top: 310px;
+padding-left: 125px;
+color: red;
+font-family: arial;
+font-weight: normal;
+font-size: 22px;">{{mensaje}}</h1>
+</div>
+
+<div class="back_button" style="bottom: 2em;top: 38.8em;left: 0em;">
+		<button class="actionbutton ng-binding" ng-click="changeView('menu')" style="height:3em;">
+			<div class="bullet"></div>
+			<div class="label">Volver</div>
+		</button>
+	</div>
+
+
+
+<footer>
+	<img src="img/logo.png" style="max-width: 9%;margin-top: -70px;margin-left: 10px; float:left;"/>
+	<div style="float: right;font-size: 1em;font-weight: normal;color: white;font-family: arial;font-style: italic;margin-top: 15px;margin-right: 15px;">Juegue con <strong>ventaja.</strong></div>
+  	
+</footer>
+</div>

@@ -1,0 +1,56 @@
+<div class="acceso">
+	<div id="keypad">
+		<div class="row">
+			<button value="1">1</button>
+			<button value="2">2</button>
+			<button value="3">3</button>
+		</div>
+		<div class="row">
+			<button value="4">4</button>
+			<button value="5">5</button>
+			<button value="6">6</button>
+		</div>
+		<div class="row">
+			<button value="7">7</button>
+			<button value="8">8</button>
+			<button value="9">9</button>
+		</div>
+		<div class="row">
+			<button value="c">C</button>
+			<button value="0">0</button>
+			<button value="b"><</button>
+		</div>
+	</div>
+
+
+
+	<div id="nameholder" style="width:600px; margin: 0 auto;padding-top:11em;">
+		<h1 id="pinpage_bienvenido">Bienvenido</h1>
+		<input class="pinpage_input grad" value="{{name}}"/>
+	</div>
+
+	<div id="pinholder" style="width:600px; margin: 0 auto;">
+		<h1 id="pinpage_bienvenido">Pin</h1>
+		<input id="pin" class="pinpage_input grad" type="password" style="font-family:monospace;font-size: 4em;" maxlength="10">
+	</div>
+
+
+	<div id="acceso_buttoncontainer" class="ng-scope">
+		<button style="padding-left: 38px;height: 3em;" class="actionbutton" ng-click="checkPin()">Ingresar</button>
+	</div>
+
+
+	<div class="back_button">
+		<button class="actionbutton ng-binding" ng-click="changeView('menu')" style="">
+			<div class="bullet"></div>
+			<div class="label">Volver</div>
+		</button>
+	</div>
+
+
+	<footer>
+		<img src="img/logo.png" style="max-width: 9%;margin-top: -61px;margin-left: 10px; float:left;"/>
+		<div style="float: right;font-size: 1em;font-weight: normal;color: white;font-family: arial;font-style: italic;margin-top: 15px;margin-right: 15px;">Juegue con <strong>ventaja.</strong></div>
+	</footer>
+
+</div>

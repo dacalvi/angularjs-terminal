@@ -1,0 +1,9 @@
+{
+	"Nombre": "Juana", 
+	"Apellido": "Molina",
+	"Ranking": "Platinum", 
+	"PlayerID": "1",
+	"status": "ok", 
+	"IdSesion": "12345",
+	"Error": {"Codigo":0}
+}

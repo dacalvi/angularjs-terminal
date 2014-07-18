@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Hipódromo Argentino de Palermo</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<div id="fullcontainer" class="{{ranking}}" ng-view></div>
+
+
+
+<!-- BxSlider -->
+	<!-- bxSlider Javascript file -->
+	<script src="js/jquery.bxslider.min.js"></script>
+	<!-- bxSlider CSS file -->
+	<link href="lib/jquery.bxslider.css" rel="stylesheet" />
+<!-- BxSlider -->
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/jquery.cookie.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/AccesoController.js"></script>
+<script src="js/controllers/BuscarmaquinaController.js"></script>
+<script src="js/controllers/CambioPinController.js"></script>
+<script src="js/controllers/ConsultaPuntosController.js"></script>
+<script src="js/controllers/DesbloqueoController.js"></script>
+<script src="js/controllers/DondeEstoyController.js"></script>
+<script src="js/controllers/EstoyPerdidoController.js"></script>
+<script src="js/controllers/HomeController.js"></script>
+<script src="js/controllers/LectorController.js"></script>
+<script src="js/controllers/MenuController.js"></script>
+<script src="js/controllers/MostrarMaquinaController.js"></script>
+<script src="js/controllers/NoSociosController.js"></script>
+<script src="js/controllers/PinCambiadoController.js"></script>
+<script src="js/controllers/GraciasFeedBackController.js"></script>
+<script src="js/controllers/PuntosVisitaController.js"></script>
+<script src="js/controllers/ReservaController.js"></script>
+<script src="js/controllers/SalirController.js"></script>
+<script src="js/controllers/UbicarMaquinaController.js"></script>
+
+<script>
+			var modal = (function(){
+				var 
+				method = {},
+				$overlay,
+				$modal,
+				$content,
+				$close;
+
+				// Center the modal in the viewport
+				method.center = function () {
+					var top, left;
+
+					top = Math.max($(window).height() - $modal.outerHeight(), 0) / 2;
+					left = Math.max($(window).width() - $modal.outerWidth(), 0) / 2;
+
+					$modal.css({
+						top:top + $(window).scrollTop(), 
+						left:left + $(window).scrollLeft()
+					});
+				};
+
+				// Open the modal
+				method.open = function (settings) {
+					$content.empty().append(settings.content);
+
+					$modal.css({
+						width: settings.width || 'auto', 
+						height: settings.height || 'auto'
+					});
+
+					method.center();
+					$(window).bind('resize.modal', method.center);
+					$modal.show();
+					$overlay.show();
+				};
+
+				// Close the modal
+				method.close = function () {
+					$modal.hide();
+					$overlay.hide();
+					$content.empty();
+					$(window).unbind('resize.modal');
+				};
+
+				// Generate the HTML and add it to the document
+				$overlay = $('<div id="overlay"></div>');
+				$modal = $('<div id="modal"></div>');
+				$content = $('<div id="content"></div>');
+				$close = $('');
+
+				$modal.hide();
+				$overlay.hide();
+				$modal.append($content, $close);
+
+				$(document).ready(function(){
+					$('body').append($overlay, $modal);						
+				});
+
+				$close.click(function(e){
+					e.preventDefault();
+					method.close();
+				});
+
+				return method;
+			}());
+
+			var okCancelContent = function(content){
+				//var markupModal = "<div class='modalContent'>" + content.text + "</div>"; 
+				//markupModal += "<hr>";
+				var rankingClass = $("#fullcontainer").attr("class");
+				if(rankingClass == ""){
+					rankingClass = "Classic";
+				}
+				var textContent = $("<div class='modaltext' />").text(content.text);
+				var markupModal = $("<div class='modalContent' />").addClass(rankingClass);
+				markupModal.append(textContent);
+				$.each(content.buttons, function(e){
+					var newEl = $('<button class="buttonmodal" />').text(content.buttons[e].label).on("click", content.buttons[e].action);
+					$(markupModal).append(newEl);
+				});
+				return markupModal;
+			}
+
+			var okCancelModal = function (contenido){
+				modal.open({
+					content: okCancelContent(contenido),
+					width: "650px"
+				});
+			}
+
+		</script>
+
+</body>
+</html>

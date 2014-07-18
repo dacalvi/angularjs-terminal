@@ -1,0 +1,128 @@
+<!-- TODO: Esta linea es para las transiciones, copiarla en cada pagina que se desee colocar el video -->
+<video id="video_transition" src="video/transition.mp4" style="position: absolute;z-index: 999;display: none;width: 100%;"></video>
+<div class="buscarmaquina">
+	<header>
+		<div class="subrayado"><div class="card"></div>Bienvenido</div>
+		<div class="nombre">{{name}}</div>
+	</header>
+
+	<div id="buscadormaquina">
+
+		<ul id="listajuegos"  style="height: 266px; margin-left:68px;margin-top: 62px;">
+			<li ng-repeat="resultado in resultados">
+				<button style="width: 27em;margin-left: 0px;margin-top: 0px;" class="actionbutton" ng-click="buscarmaquinapornombre(resultado.Descripcion)">{{resultado.Descripcion}}</button>
+			</li>
+		</ul>
+
+
+		<div id="listasectores" style="width: 1120px; height:200px;position:absolute;top: 103px;left: 50px;display:none;">
+			<ul id="slidesalas">
+				<li style="display:none;margin-top: 20px;" ng-repeat="sector in sectores">
+					<img src="mapas/sala{{salaid}}_{{sector.IdSala}}.png" /> 
+					<h1 style="color:white;margin-top: 30px;">Sector {{sector.IdSector}}</h1>
+				</li>
+			</ul>
+
+			<button id="atrasbtn" class="actionbutton ng-binding" ng-click="prev_slide()" style="z-index:501; float: left;">
+				<div class="bullet"></div>
+				<div class="label">Atras</div>
+			</button>
+
+			<button id="massectoresbtn" class="actionbutton ng-binding" ng-click="next_slide()" style="z-index:500; float:right;">
+				<div class="bullet"></div>
+				<div class="label">Mas sectores</div>
+			</button>
+
+		</div>
+		<div class="back_button" style="top: 0em;margin-right: 20px;">
+			<button class="actionbutton ng-binding" ng-click="changeView('menu')">
+				<div class="bullet"></div>
+				<div class="label">Volver</div>
+			</button>
+		</div>
+
+
+
+
+
+		<div id="keypad" style="margin-left:10px;margin-top: 0px;float:left;margin-left: 120px;margin-top: 60px;">
+			<input id="textobusquedamaquina" style="margin: 2px;
+			width: 823px;
+			font-size: 35px;
+			background: transparent;
+			border: solid 1px gray;
+			border-radius: 12px;
+			margin-bottom: 10px;
+			color: white;
+			margin-left: 50px;" class="grad"/>
+			<div class="row" style="margin-left: 40px;">
+				<button ng-click="tecla('0')" value="0">0</button>
+				<button ng-click="tecla('1')" value="1">1</button>
+				<button ng-click="tecla('2')" value="2">2</button>
+				<button ng-click="tecla('3')" value="3">3</button>
+				<button ng-click="tecla('4')" value="4">4</button>
+				<button ng-click="tecla('5')" value="5">5</button>
+				<button ng-click="tecla('6')" value="6">6</button>
+				<button ng-click="tecla('7')" value="7">7</button>
+				<button ng-click="tecla('8')" value="8">8</button>
+				<button ng-click="tecla('9')" value="9">9</button>
+			</div>
+			<div class="row">
+				<button ng-click="tecla('q')" value="q">Q</button>
+				<button ng-click="tecla('w')" value="w">W</button>
+				<button ng-click="tecla('e')" value="e">E</button>
+				<button ng-click="tecla('r')" value="r">R</button>
+				<button ng-click="tecla('t')" value="t">T</button>
+				<button ng-click="tecla('y')" value="y">Y</button>
+				<button ng-click="tecla('u')" value="u">U</button>
+				<button ng-click="tecla('i')" value="i">I</button>
+				<button ng-click="tecla('o')" value="o">O</button>
+				<button ng-click="tecla('p')" value="p">P</button>
+				<button ng-click="tecla('<')" value="<"><img src="img/bullet-reverse.png" style="width: 30px;
+					height: 30px;
+					margin-left: -18px;
+					margin-top: 9px;"/></button>
+				</div>
+				<div class="row" style="margin-left:39px;">
+					<button ng-click="tecla('a')" value="a">A</button>
+					<button ng-click="tecla('s')" value="s">S</button>
+					<button ng-click="tecla('d')" value="d">D</button>
+					<button ng-click="tecla('f')" value="f">F</button>
+					<button ng-click="tecla('g')" value="g">G</button>
+					<button ng-click="tecla('h')" value="h">H</button>
+					<button ng-click="tecla('j')" value="j">J</button>
+					<button ng-click="tecla('k')" value="k">K</button>
+					<button ng-click="tecla('l')" value="l">L</button>
+					<button ng-click="tecla('ñ')" value="ñ">Ñ</button>
+				</div>
+				<div class="row">
+					<button ng-click="tecla('!')" value="!" ng-class="lettercase"><img src="img/bullet-reverse.png" class="shift"/></button>
+					<button ng-click="tecla('z')" value="z">Z</button>
+					<button ng-click="tecla('x')" value="x">X</button>
+					<button ng-click="tecla('c')" value="c">C</button>
+					<button ng-click="tecla('v')" value="v">V</button>
+					<button ng-click="tecla('b')" value="b">B</button>
+					<button ng-click="tecla('n')" value="n">N</button>
+					<button ng-click="tecla('m')" value="m">M</button>
+					<button value="-" ng-click="tecla(' ')" style="width: 5em;"> </button>
+					<button ng-click="tecla('!')" value="!" ng-class="lettercase"><img src="img/bullet-reverse.png" class="shift"/></button>
+				</div>
+
+
+
+
+			</div>
+			<div id="stripe" style="margin-top: 260px;"></div>
+
+		</div>
+
+
+
+
+	</div>
+
+	<footer>
+		<img src="img/logo.png" style="max-width: 9%;margin-top: -70px;margin-left: 10px; float:left;"/>
+		<div style="float: right;font-size: 1em;font-weight: normal;color: white;font-family: arial;font-style: italic;margin-top: 15px;margin-right: 15px;"  ng-bind-html="mensajefun"></div>
+	</footer>
+</div>

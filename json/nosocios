@@ -1,0 +1,7 @@
+[
+    {"label":"Shows", "url":"reserva"}, 
+    {"label":"¿Donde estoy?", "url":"dondeestoy"}, 
+    {"label":"Buscar maquina", "url":"buscarmaquina"}, 
+    {"label":"¿No encontro lo que buscaba?", "url":"estoyperdido"},
+    {"label":"Salir", "url":"home"}
+    ]

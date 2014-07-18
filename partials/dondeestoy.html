@@ -1,0 +1,17 @@
+<div class="dondeestoy">
+	<header>
+		<div class="subrayado"><div class="card"></div>Bienvenido</div>
+		<div class="nombre">{{name}}</div>
+	</header>
+
+	<img style="max-width: 100%;margin-left: 84px; margin-top: 120px;" src="mapas/{{nromaquina}}.png">
+		
+		<div id="acceso_buttoncontainer" class="ng-scope" style="display: block;">
+			<button style="padding-left: 38px; position: absolute; left: 1000px;height: 3em;" class="actionbutton" ng-click="changeView('menu')">Volver</button>
+		</div>
+
+	<footer>
+	  <img src="img/logo.png" style="max-width: 9%;margin-top: -70px;margin-left: 10px; float:left;"/>
+	  <div style="float: right;font-size: 1em;font-weight: normal;color: white;font-family: arial;font-style: italic;margin-top: 15px;margin-right: 15px;" ng-bind-html="mensajefun"></div>
+	</footer>
+</div>

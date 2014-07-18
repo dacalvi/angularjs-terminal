@@ -1,0 +1,632 @@
+/* app css stylesheet */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+  margin: 0 0 0px; /* bottom = footer height */
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background:rgba(0,0,0,0.4);
+}
+
+header {
+  margin-top: 22px;
+  height: 1.5em;
+  color: white;
+  font-family: arial;
+}
+
+header .subrayado {
+  border-bottom: solid 2px white;
+  width: 12em;
+  text-align: right;
+  font-weight: bold;
+  padding-top: 3em;
+  float: left;
+  font-style: italic;
+}
+
+.card {
+  height: 69px;
+  position: absolute;
+  width: 103px;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  top: 21px;
+  left: 17px;
+}
+
+#fullcontainer.Classic header .card {
+  background-image: url(img/classic.png);
+}
+
+#fullcontainer.Diamond header .card {
+  background-image: url(img/diamond.png);
+}
+
+#fullcontainer.Gold header .card {
+  background-image: url(img/gold.png);
+}
+
+#fullcontainer.Platinum header .card {
+  background-image: url(img/platinum.png);
+}
+
+header .nombre {
+  width: 12em;
+  padding-top: 1.5em;
+  float: left;
+  margin-left: 1em;
+  font-size: 1.7em;
+  font-style: italic;
+}
+
+.back_button {
+  float: right;
+  position: relative;
+  top: 9em;
+}
+
+.grad {
+  background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.73)), to(rgba(0, 0, 0, 0)), color-stop(.7,rgba(0, 0, 0, 0.23)) ) !important;
+}
+
+.back_button button .bullet{
+  float: left;
+  background: url(img/bullet.png) no-repeat 0 0;
+  width: 1em;
+  height: 100px;
+  margin-left: -1px;
+  background-size: 100%;
+  background-position-y: 27px;
+}
+
+.back_button button .label {
+  float: left;
+  margin-left: 39px;
+  text-align: left;
+  padding-top: 23px;
+  width: 5em;
+}
+
+.back_button button{
+  color: #2E1332;
+  height: 3em;
+  width: 9em;
+}
+
+.puntosvisita .cta_button{
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 8em;
+  text-align: right;
+  bottom: 4em;
+  position: absolute;
+}
+
+
+
+.puntosvisita .cta_button button{
+  color: #2E1332;
+  height: 3em;
+}
+
+.puntosvisita .cta_button button .label {
+  float: left;
+  margin-left: 39px;
+  text-align: left;
+  line-height: 34px;
+  padding-top: 14px;
+  width: 8em;
+}
+
+.puntosvisita .cta_button button .bullet{
+  float: left;
+  background: url(img/bullet.png) no-repeat 0 0;
+  width: 1em;
+  height: 100px;
+  margin-left: -1px;
+  background-size: 100%;
+  background-position-y: 27px;
+}
+
+
+
+
+#video_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 100%;
+}
+
+h1#lector_bienvenido {
+  padding-top: 65px;
+  margin: 0 auto;
+  width: 386px;
+  font: 5em serif;
+  color: #FFFFFF;
+  font-family: monospace;
+  font-style: italic;
+}
+
+
+h1#lector_brand {
+  margin: 0 auto;
+  width: 813px;
+  font: 2.5em serif;
+  color: #FFFFFF;
+  font-family: "Soho Std";
+  font-weight: bold;
+}
+
+h1#lector_mensajesocio {
+  margin: 0 auto;
+  width: 1260px;
+  font: 3em serif;
+  color: #FFFFFF;
+  font-family: monospace;
+}
+
+#fullcontainer {
+  height: auto !important; /* ie6 ignores !important, so this will be overridden below */
+  min-height: 110%; /* ie6 ignores min-height completely */
+  height: 100%;
+  margin-top: -22px;
+    background-image: url(img/bg_classic.jpg);
+}
+
+#lector_logocontainer{
+  padding-bottom: 40px;
+  margin: 0 auto;
+  width: 440px;
+  padding-top: 90px;
+}
+
+#lector_buttoncontainer {
+  margin: 0 auto;
+  width: 1300px;
+  padding-top: 10px;
+}
+
+#lector_buttoncontainer button {
+  font-family: monospace;
+  font-style: italic;
+  font-size: 2.2em;
+}
+
+#acceso_buttoncontainer {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  height: 8.7em;
+  width: 100%;
+  display: none;
+}
+
+
+#acceso_buttoncontainer button {
+  width: 8em;
+}
+
+.button_menu {
+  /* background: url(img/bullet.png) no-repeat 0 0; */
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 0px;
+  width: 46%;
+}
+
+.button_menu button {
+  text-align: left;
+  height: 3em;
+  color: #2E1332;
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.button_menu button:before{
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  margin-right: 5px;
+  content: "";
+  background: url(img/bullet.png) no-repeat 0 0;
+  background-size: 100%;
+  background-position-y: 0px;
+}
+
+#menubuttonscontainer {
+  width: 60em;
+  /*background-color: rgba(30, 30, 30, 0.5);*/
+  margin: 10px auto;
+  padding: 0px;
+}
+
+
+
+#lector_buttoncontainer button:before, #acceso_buttoncontainer button:before {
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  margin-right: 5px;
+  content: "";
+  background: url(img/bullet.png) no-repeat 0 0;
+  background-size: 100%;
+  background-position-y: 0px;
+}
+
+#lector_buttoncontainer button:after, #acceso_buttoncontainer button:after {
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  margin-right: 5px;
+  content: "";
+  background: url(img/bullet-reverse.png) no-repeat 0 0;
+  background-size: 51%;
+  background-position-x: 4px;
+  background-position-y: 1px;
+}
+
+#fullcontainer.Classic, .modalContent.Classic{
+  background-image: url(img/bg_classic.jpg);
+}
+
+#fullcontainer.Diamond, .modalContent.Diamond{
+  background-image: url(img/bg_diamond.jpg);
+}
+
+#fullcontainer.Gold, .modalContent.Gold{
+  background-image: url(img/bg_gold.jpg);
+}
+
+#fullcontainer.Platinum, .modalContent.Platinum{
+  background-image: url(img/bg_platinum.jpg);
+}
+
+#fullcontainer.verde, .modalContent.verde{
+  background-image: url(img/bg_verde.jpg);
+}
+
+/*pinpage*/
+
+.pinpage_input {
+  background: transparent;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 12px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: normal;
+  font-family: arial;
+}
+
+#pinpage_bienvenido{
+  color: white;
+  font-size: 2em;
+  font-family: Arial;
+  margin-bottom: 0px;
+}
+
+/*Keypad*/
+.ui-widget.ui-widget-content.keypad-inline{
+  background: transparent !important;
+  border: none !important;
+}
+
+
+button{
+  color: #2E1332;
+  font: 2em Arial, sans-serif;
+  padding: 14px;
+  background: url(css/overlay.png) repeat-x center #B4B4B4;
+  border: 1px solid #afafaf;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border-bottom: 1px solid #9f9f9f;
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+#keypad {
+  position: absolute;
+  background-color: rgba(100, 100, 100, 0);
+  border-radius: 5px;
+  display: none;
+
+}
+
+#keypad button, .actionbutton {
+  width: 2em;
+  height: 2em;
+  margin: .2em;
+
+
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+  min-width: 96px;
+  line-height: 46px;
+  padding: 0 24px;
+  
+  color: #2C0E30;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px #154c86;
+  background-color: #D8D8D8;
+  background-clip: padding-box;
+  border: 1px solid;
+  border-color: #1c65b2 #18589c #18589c;
+  border-radius: 22px;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+}
+
+.actionbutton {
+  width: 12em;
+}
+
+/* CONSULTA PUNTOS */
+
+.consultapuntos .back_button {
+  bottom: 2em;
+  top: -7em;
+  left: 10em;
+}
+
+.graciasfeedback .back_button {
+  top: 340px;
+}
+
+.graciasfeedback #mensajegracias {
+  margin-top: 300px;
+}
+
+.acceso .back_button {
+  top: 38.8em;
+  left: -10px;
+}
+
+/* CAMBIO DE PIN */
+.cambiopin #keypad{
+  display: inline;
+  margin-left: 2em;
+}
+
+.label_cambiopin{
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  font-family: arial;
+  font-style: italic;
+}
+
+#cambiopincontainier {
+  margin-top: 5em;
+  margin-left: 19em;
+  height: 18em;
+}
+
+#cambiopincontainier .nuevopin, #cambiopincontainier .repin {
+  opacity: 0;
+}
+
+.cambiopin .back_button {
+  bottom: 2em;
+  top: -5em;
+  left: 10em;
+}
+
+.cambiopin #acceso_buttoncontainer{
+  position: relative;
+  margin-top: 5em;
+  margin-left: -19em;
+} 
+
+.cambiopin .back_button button {
+  height: 2em;
+}
+
+.cambiopin .back_button button .label{
+  padding-top: 8px;
+}
+
+.cambiopin .back_button button .bullet{
+  background-size: 69%;
+  background-position-y: 20px;
+}
+
+/* DESBLOQUEO DE TARJETA */
+
+.centerMessage {
+  width: 18em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  color: white;
+  font-family: Arial;
+  font-style: italic;
+  margin-top: 8em;
+  font-size: xx-large;
+}
+
+.desbloqueo .back_button {
+  bottom: 2em;
+  top: -7em;
+  left: 10em;
+}
+
+
+/* LECTOR DE TARJETA */
+
+.lector .nosocios_btn {
+  margin-left: 5em;
+  width: 34em;
+  padding: 5px;
+}
+
+
+
+/* PANTALLA DE NO SOCIOS */
+.nosocios #menubuttonscontainer {
+  padding-top: 7em;
+}
+
+
+.redborder {
+  border: 1px solid red;
+}
+
+/* PANTALL BUSCADOR MAQUINA */
+#buscadormaquina #keypad {
+  display: block;
+  position: relative;
+}
+
+#buscadormaquina #keypad button{
+  padding: 0px;
+  margin: 2px;
+  width: 77px;
+  height: 68px;
+  min-width: 65px;
+}
+
+.slidercustom {
+  background-color: black;
+}
+
+.bx-viewport {
+  background: none;
+}
+
+
+/*  MODAL  */
+* {
+        margin:0; 
+        padding:0;
+      }
+
+      #overlay {
+        position:fixed; 
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:#000;
+        opacity:0.5;
+        filter:alpha(opacity=50);
+      }
+
+      #modal {
+        position:absolute;
+        border-radius:38px;
+        padding:0px;
+        border: solid 1px white;
+      }
+
+      #content {
+        /* border-radius:8px; */
+        /* background:#fff; */
+        padding:0px;
+      }
+
+      #close {
+        position:absolute;
+        background:url(close.png) 0 0 no-repeat;
+        width:24px;
+        height:27px;
+        display:block;
+        text-indent:-9999px;
+        top:-7px;
+        right:-7px;
+      }
+
+      .modalContent{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 38px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      
+      .modaltext {
+        font-family: Arial;
+        font-size: 31px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: -33px;
+        margin-top: 80px;
+        font-style: italic;
+      }
+
+      .modalContent button {
+        margin: 70px;
+      }
+
+
+
+#stripe {
+  height: 216px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: -260px;
+}
+
+.shift {
+  width: 30px;
+  height: 30px;
+  margin-left: 0px;
+  margin-top: 9px;
+  -webkit-transform:rotate(90deg);
+}
+
+.uppercase {
+  border: solid 2px red!important;
+}
+
+.lowercase {
+  background-color: #D8D8D8;
+}
+
+.buttonmodal:before {
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  margin-right: 5px;
+  content: "";
+  background: url(img/bullet.png) no-repeat 0 0;
+  background-size: 100%;
+  background-position-y: 0px;
+}

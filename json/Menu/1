@@ -1,0 +1,12 @@
+{"Menu": [
+    {"label":"Consulta de puntos", "url":"consultapuntos"}, 
+    {"label":"Puntos por visita", "url":"puntosvisita"}, 
+    {"label":"Desbloqueo de tarjeta", "url":"desbloqueo"},
+    {"label":"Cambio de Pin", "url":"cambiopin"}, 
+    {"label":"Reserva de Shows", "url":"reserva"}, 
+    {"label":"¿Donde estoy?", "url":"dondeestoy"}, 
+    {"label":"Buscar maquina", "url":"buscarmaquina"}, 
+    {"label":"¿No encontro lo que buscaba?", "url":"estoyperdido"},
+    {"label":"Feedback", "url":"feedback"},
+    {"label":"Salir", "url":"salir"}
+    ]}

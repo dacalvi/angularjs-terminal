@@ -1,0 +1,33 @@
+<div class="menu">
+
+<header>
+	<div class="subrayado"><div class="card"></div>Bienvenido</div>
+	<div class="nombre">{{name}}</div>
+
+	
+</header>
+
+<div style="clear:both;"></div>
+
+
+<div id="menubuttonscontainer">
+
+	<div class="button_menu" ng-repeat="boton in botones">
+		<button class="actionbutton" ng-click="changeView(boton.url)">{{boton.label}}</button>
+	</div>
+
+
+
+	<div style="clear:both;"></div>
+</div>
+
+
+
+
+<footer>
+  <img src="img/logo.png" style="max-width: 9%;margin-top: -70px;margin-left: 10px; float:left;"/>
+
+  <div style="float: right;font-size: 1em;font-weight: normal;color: white;font-family: arial;font-style: italic;margin-top: 15px;margin-right: 15px;">Juegue con <strong>ventaja.</strong></div>
+</footer>
+
+</div>
